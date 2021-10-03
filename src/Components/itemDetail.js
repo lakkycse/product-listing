@@ -24,19 +24,19 @@ function ItemDetail() {
                 <div className="details-card">
                     <h2>{item.title}</h2>
                     <Container>
-                    {[...Array(5)].map((i,index) => {
-                        return (
-                            <Rating key={index}>
-                            <GrStar key={index}
-                                color={
-                                    index < item.rating.rate
-                                        ? "000"
-                                        : "rgb(192,192,192)"
-                                }
-                            />
-                            </Rating>
-                        );
-                    })}
+                        {[...Array(5)].map((i, index) => {
+                            return (
+                                <Rating key={index}>
+                                    <GrStar key={index} style={{"height":"0.5em","width":"0.5em"}}
+                                        color={
+                                            index < item.rating.rate
+                                                ? "#ffd700"
+                                                : "rgb(192,192,192)"
+                                        }
+                                    />
+                                </Rating>
+                            );
+                        })}
                     </Container>
                     <span>₹{item.price}</span>
                     <p>{item.description}</p>
