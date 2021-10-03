@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 import { GrStar } from "react-icons/gr";
-import { Container, Radio, Rating } from "./SlideImage";
+import { Container, Rating } from "./itemStyle";
 
-function ItemDetail(match) {
+function ItemDetail() {
     const { Id } = useParams();
     const [item, setItem] = useState(null);
 
